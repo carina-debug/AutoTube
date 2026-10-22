@@ -19,13 +19,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Android SDK Kur ve Projeyi Derle
-        uses: android-actions/setup-android@v3
-
-      - name: Gradle ile APK Olustur
+      - name: APK Derle (Build)
         run: |
-          gradle wrapper --gradle-version 8.2
-          ./gradlew assembleDebug
+          chmod +x gradlew || true
+          gradle wrapper --gradle-version 8.5
+          ./gradlew assembleDebug --no-daemon
 
       - name: APK Dosyasini Yukle
         uses: actions/upload-artifact@v4
