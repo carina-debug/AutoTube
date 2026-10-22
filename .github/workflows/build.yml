@@ -21,8 +21,6 @@ jobs:
 
       - name: APK Derle (Build)
         run: |
-          chmod +x gradlew || true
-          gradle wrapper --gradle-version 8.5
           ./gradlew assembleDebug --no-daemon
 
       - name: APK Dosyasini Yukle
