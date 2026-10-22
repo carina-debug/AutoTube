@@ -25,7 +25,7 @@ jobs:
           gradle-version: '8.2'
 
       - name: APK Derle (Build)
-        run: gradle assembleDebug --no-daemon --stacktrace
+        run: gradle assembleDebug --no-daemon
 
       - name: APK Dosyasini Yukle
         uses: actions/upload-artifact@v4
