@@ -24,6 +24,9 @@ jobs:
         with:
           gradle-version: '8.2'
 
+      - name: Proje Izinlerini Duzenle
+        run: chmod +x gradlew || true
+
       - name: APK Derle (Build)
         run: gradle assembleDebug
 
